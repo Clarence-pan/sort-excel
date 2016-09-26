@@ -49,7 +49,7 @@ export default async function sortExcel(options)
             return;
         }
 
-        if (options.columns !== '*' && !_.contains(options.columns, colTitle) && !_.contains(options.columns, colLetter)){
+        if (options.columns !== '*' && !in_array(colTitle, options.columns) && !in_array(colLetter, options.columns)){
             return;
         }
 
@@ -67,6 +67,11 @@ export default async function sortExcel(options)
     xlsx.writeFile(workbook, options.outputFile);
 
     return null;
+}
+
+function in_array(x, arr)
+{
+    return arr.indexOf(x) >= 0;
 }
 
 function sortDataByCol(col, data)
