@@ -20,8 +20,7 @@ var SimpleFileCache = require('./plugins/simple-file-cache.js');
 var combine = require('./plugins/combine.js');
 
 // 文件缓存
-var cache = SimpleFileCache.instance();
-
+var cache = SimpleFileCache.instance({file: path.resolve('./storage/simple-cache.json')});
 
 var LIB_BASE = './client/lib';  // 源文件基础目录
 var LIB_SRC = './client/lib/src'; // 源文件目录

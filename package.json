@@ -4,8 +4,8 @@
   "description": "一个定制的excel排序工具",
   "main": "bin/sort-excel.js",
   "scripts": {
-    "test": "node tests/index.js",
-    "tests": "node tests/index.js",
+    "test": "babel-node tests/index.js",
+    "tests": "babel-node tests/index.js",
     "build": "gulp",
     "rebuild": "gulp rebuild",
     "watch": "gulp watch"
@@ -22,6 +22,7 @@
   "homepage": "https://github.com/Clarence-pan/sort-excel#readme",
   "dependencies": {
     "array-unique": "^0.3.2",
+    "babel-cli": "^6.14.0",
     "babel-core": "^6.14.0",
     "babel-loader": "^6.2.5",
     "babel-plugin-syntax-async-functions": "^6.8.0",
@@ -34,6 +35,7 @@
     "css-spriter": "^0.0.22",
     "del": "^2.2.2",
     "dotenv": "^2.0.0",
+    "es-checker": "^1.4.0",
     "es3ify-webpack-plugin": "^0.0.1",
     "es6-promise": "^3.3.1",
     "es6-promise-polyfill": "^1.2.0",
@@ -95,7 +97,7 @@
     "webpack": "^1.13.2",
     "webpack-dev-server": "^1.15.2",
     "webpack-stream": "^3.2.0",
-    "yaml-loader": "^0.4.0",
-    "xlsx": "^0.8.0"
+    "xlsx": "^0.8.0",
+    "yaml-loader": "^0.4.0"
   }
 }

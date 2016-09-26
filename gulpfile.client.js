@@ -242,7 +242,7 @@ gulp.task('restart-client-watch', function(){
 // 清理构建后的文件
 gulp.task('clean-client', function () {
     return del([
-        'public/dist/**/*',
+        DIST_DIR + '/**/*',
     ]);
 });
 
